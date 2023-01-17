@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image:url(IMG/black-grunge-background-with-vintage-texture-black-background-with-blackboard-texture-for-cover-background-poster-web-landing-page-cover-ad-greeting-card-promotion-free-vector.jpg);
+    background-color: #222222;
+}
+
+.menu__nav {
+    text-align: right;
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    
+}
+.menu__nav li {
+    display: inline; 
+    margin-right: 1rem;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%; /*ayuda a que las imagenes se adapten al espacio de la pantalla */
+}
+
+.logo {
+    display: inline; 
+    margin: 20px;
+    width: 200px;
+
+}
+
+#menu {
+    visibility: hidden;
+}
+.label__hamburguesa { 
+    visibility: hidden;
+}
+
+.elementos {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+
+}
+  
+.text__menu {
+    color: white;
+    padding: 10px;
+    flex: 40%;
+    font-size: 60px;
+    font-weight: 100px;
+    text-align: center;
+    margin-left: 200px;
+}
+  
+.Hamburguesa__menu{
+    padding: 20px;
+    margin-right: 80px;
+    flex: 25%;
+}
+@media screen and(max-width: 800px) {
+    .texto, .hamburguesa {
+      flex: 80%;
+    }
+}
+
+.titulo { 
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-top: 3rem;
+    margin-right: 2rem ;
+    margin-left: 2rem;
+    padding: 15px;
+
+
+
+}
+.contenido {
+    background-color: #222222;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 0rem 2rem;
+}
+.Img__fav { 
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+}
+
+.boton { 
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    margin: 0rem 2rem;
+}
+.label__reseña { 
+    display: inline-block;
+    width: 150px; 
+    color:white;
+    text-align: left;
+
+    
+}
+
+.estilo__form {
+    background-color: #222222;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 0rem 2rem;
+}
+.formulario {
+    width: 500px;
+    border-radius: 1em;
+
+}
+
+.boton__form {
+    margin-left: 210px;
+}
+
+#productos {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    
+}
+/* codigo de #productos*/
+.card {
+    background-color: #222222;
+    padding: 3rem;
+    margin: 25px;
+    width: 200px;
+    height: 300px;
+    border: solid 3px white;
+    color: white;
+    
+}
+
+.card__imagen {
+    width: 200px;
+}
+.card__titulo {
+    margin: 20px 0px;
+    color: white;
+}
+
+.boton__menu {
+    margin-top: 20px;
+}
+
+
+/* Menu hamburguesa */
+
+@media screen and (max-width: 768px){
+    #menu {
+        visibility: visible;
+
+    }
+    .label__hamburguesa {
+        visibility: visible;
+        position: absolute;
+        top: 30px;
+        right: 40px; 
+     }
+    ul{
+        display: none;
+      }
+      
+      input:checked  ~ ul{
+        display:block;
+      }
+      
+      input {
+        display: none;
+      }
+      
+      .label__hamburguesa{
+        box-sizing: border-box;
+        display: block;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+      }
+      
+       /*Estilo del boton cuando se pasa el mouse por encima*/
+      label:hover{
+        background: white;
+      }
+      
+      /* Estilo del boton cuando el menú está expandido*/
+      input:checked ~ label {
+        background: lightgrey; 
+      }
+      
+      ul{
+        margin-top:0;
+        padding: 0;
+        width: 200px;
+      
+      }
+      
+      
+      li {
+        display: block;
+        background: lightgrey;
+        margin: 0;
+        padding: 5px;
+        list-style: none;
+        border-bottom: 1px solid white;
+      }
+      
+      /*Estilo cuando el mouse pasa encima de cada link del menu*/
+      li:hover {
+        filter: brightness(110%);
+      } 
+}
+
+.Footer {
+    background-color: #222222;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 20px;
+    padding: 3rem;
+
+}
+
+.img__redes {
+    display: inline; 
+    margin: 5px;
+    width: 30px;
+    
+}
+
+

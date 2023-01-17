@@ -1,0 +1,71 @@
+/* {
+    margin: 0;
+    padding: 0;
+}*/
+html {
+    font-size: 62.5%; /* 1 rem = a 10 px*/
+}
+
+a {
+    text-decoration: line-through; /*modificar linea de enlace*/
+}
+/*colocar color al titulo*/
+h1{
+    color: red;
+    text-align: center; /*alinear titulo centrar*/
+}
+/*todas las class css se inician con un punto*/
+.color-morado {
+    color: purple;
+    line-height: 1; /* sirve para separas linea de la otra*/
+}
+
+.letra-grande {
+    font-size: 40px;
+}
+
+
+/*el id en css se representa con un #
+#section-tabla {
+    background-color: aquamarine!important; /*important pisa a class y id*/
+
+
+ /*el id en css se representa con un #*/   
+
+#section-tabla {
+   /* background-color:rgba(228, 107, 8, .8);b 
+   
+   la a de rgba es para transparencia(poner el color menos o mas fuerte)*/
+   
+   
+   background-image: url(../img/images.png); 
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:cover;
+   background-attachment:fixed; /*efecto 3d imagen*/
+
+}
+
+#section-listaanidada {
+    background-color: aqua;
+}
+
+div {
+    color: pink;
+}
+
+/*list-style se usa para quitar los puntos de la lista o modificar el estilo*/
+ul,ol {
+    list-style: none;
+    font-style: oblique; /*cambia el estilo de texto*/
+    font-weight: 600; /*grosor de texto*/
+    font-family: serif;
+}
+
+.pixel {
+    font-size: 16px;
+}
+
+.rem {
+    font-size: 1rem;
+}

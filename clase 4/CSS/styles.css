@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header { 
+    position: fixed; /*esto es para que por ejemplo el incio nos persiga cuando bajamos */
+    top: 0;
+    background-color: aquamarine;
+    width: 100%;
+    z-index: 1; /*esto es para que el algo este por encima de todo */ 
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%; /*ayuda a que las imagenes se adapten al espacio de la pantalla */
+}
+
+nav {
+    margin-top: 2rem;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.menu__nav {
+    text-align: center;
+}
+.menu__nav li {
+    display: inline;
+    margin-right: 1rem
+}
+
+#productos {
+    margin-top: 400px;
+}
+/* codigo de #productos*/
+.card {
+    background-color: orange;
+    /*padding-top: 3rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem; */
+
+    /* atajo para no copiar todo lo de arriba
+
+    padding: 3rem 2rem 3rem 3rem;
+    /*asi estamos poniendo las separaciones en sentido a las manesillas del reloj */
+
+    /*atajo 2, me toma el primero como arriba y abajo y el segundo como los lados 
+    padding: 2rem 3rem;
+
+    atajo 3, todos los lados son iguales */
+    padding: 3rem;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    /*ancho*/
+    width: 300px;
+
+    /*alto*/
+    height: 350px;
+
+    /*ESTAMOS PONIENDO tipo de borde, grosor y color*/
+    border: solid 5px rebeccapurple;
+
+    position: relative; /*este nos indica el limite al que llegara el absolute que es elemento que se mueve  */
+}
+
+.card__oferta {
+    position:absolute;
+    top: 30px;
+    right: -50px;
+    background-color: green;
+}
+
+.card__imagen {
+    width: 200px;
+}
+.card__titulo {
+    margin: 1rem;
+}
+
+
+.CSS {
+    /* propiedades decorativas */
+    border: solid 1px black;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
+    font-family: Arial;
+     /* propiedades que hacen el "problema" */
+    width: 100px;
+    height: 110px;
+    /* solucion HIDDEN ESCONDE EL TEXTO  
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;*/
+    display: none; /*sirve para desaparecer cosas en el celular */
+   }
+
+
+  

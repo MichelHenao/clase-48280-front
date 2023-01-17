@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header { 
+    /* position: fixed; esto es para que por ejemplo el incio nos persiga cuando bajamos
+    top: 0; */
+    background-color: aquamarine;
+    width: 100%;
+    z-index: 1; /*esto es para que el algo este por encima de todo */ 
+    display: flex;
+    /* flex-direction: row, row-reverse; */
+
+    justify-content: space-evenly;
+
+    align-items: center;
+   
+
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%; /*ayuda a que las imagenes se adapten al espacio de la pantalla */
+}
+
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.menu__nav {
+    display: flex;
+    /* flex-direction: colum column-reverse; 
+    flex-wrap: wrap;
+    flex flow: colum-reverse wrap*/
+    list-style: none;
+    text-align: center;
+    gap: 1rem;
+
+
+}
+.menu__nav li a {
+    color: white;
+    transition: all 0.5s;
+}
+/* hover para efecto de cambiar al poner mouse */
+.menu__nav li a:hover{
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+/* estilo de las card */
+#productos {
+    margin-top: 400px;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    /* align-content: ; */
+    align-content: flex-start;
+
+
+    /* background-color: aqua; */
+    gap: 2rem;
+
+
+    
+}
+/* codigo de #productos*/
+.card {
+    background-color: orange;
+    /*padding-top: 3rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem; */
+
+    /* atajo para no copiar todo lo de arriba
+
+    padding: 3rem 2rem 3rem 3rem;
+    /*asi estamos poniendo las separaciones en sentido a las manesillas del reloj */
+
+    /*atajo 2, me toma el primero como arriba y abajo y el segundo como los lados 
+    padding: 2rem 3rem;
+
+    atajo 3, todos los lados son iguales */
+    padding: 3rem;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    /*ancho*/
+    width: 300px;
+
+    /*alto*/
+    height: 350px;
+
+    /*ESTAMOS PONIENDO tipo de borde, grosor y color*/
+    border: solid 5px rebeccapurple;
+
+    position: relative; /*este nos indica el limite al que llegara el absolute que es elemento que se mueve  */
+}
+
+.card__oferta {
+    position:absolute;
+    top: 30px;
+    right: -50px;
+    background-color: green;
+}
+
+.card__imagen {
+    width: 200px;
+}
+.card__titulo {
+    margin: 1rem;
+}
+
+
+.CSS {
+    /* propiedades decorativas */
+    border: solid 1px black;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
+    font-family: Arial;
+     /* propiedades que hacen el "problema" */
+    width: 100px;
+    height: 110px;
+    /* solucion HIDDEN ESCONDE EL TEXTO  
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;*/
+    display: none; /*sirve para desaparecer cosas en el celular */
+   }
+
+/* estilos galeria  */
+
+#galeria {
+    margin-top: 10rem ;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    /* align-items: stretch; */
+    
+    height: 60rem;
+    background-color: blue;
+}
+
+#galeria img {
+    /* width: 250rem; */
+    order: -1;
+}
+  
+/* clase de grid 1 */
+
+.grid {
+    margin-top: 5rem;
+    display: grid;  
+    border: solid 1px;
+
+                        /* 2 columnas en px
+        grid-template-columns: 300px 100px; 
+                           /* 2 filas en px 
+        grid-template-rows: 40px 100px;  */
+
+        /* grid-template-columns: 2fr 1fr; 
+
+        si tengo valores repetidos de filas o columnas puedo copiarlo de la siguiente manera  */
+
+        grid-template-columns: repeat(2, 1fr);
+
+
+        grid-template-rows: 3fr 1fr;
+
+}
+     
+
+.grid div {
+    border: solid 1px;
+}
+
+
+
+/* grid mobile fist */
+
+#grilla {
+    display: grid;
+}
+
+/* grid por areas  */
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+      "nav header header"
+      "nav productos publicidad"
+      "nav servicios publicidad"
+      "nav footer footer";
+    grid-template-rows: 100px 1fr 1fr 75px; 
+    grid-template-columns: 20% auto 15%;
+
+    column-gap: 10px;
+    row-gap: 10px;
+
+    height: 100vh; /*vh es viewport heiht la altura total de cualquier pantalla  */
+ }
+
+ .border {
+    border: 1px solid black;
+    background-color: yellow;
+ }
+
+ /* cuando la pantalla mida como minimo 768px haga este codigo, dentro de las media solo lo que se necesita cambiar */
+ #grilla { display: grid; }
+ @media screen and (min-width: 768px) {
+     #grilla {
+             grid-template-columns: repeat(4, 1fr);
+       }
+       .border {
+         border: 4px solid black;
+         background-color: blue;
+      }
+ }
+
+
+
+
+ header {
+    grid-area: header; 
+    /*esto debe llamarse igual a lo construido en template */
+ }
+ footer {
+    grid-area: footer;
+ }
+ section#productos {
+    grid-area: productosgrid;     
+ }
+ section#servicios {
+    grid-area: servicios;     
+ }
+ nav {
+    grid-area: nav;
+ }
+ aside {
+    grid-area: publicidad;
+ }
+ 
+
+/* grid items o grid hijos  */
+
+.grid-items {
+    justify-items: stretch; /* start | end | center | stretch */
+  align-items: stretch; /* start | end | center | stretch */
+  display: grid;
+  width: 95%;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+  grid-template-rows: 100px 100px;
+  grid-row-gap: 10px;
+
+  /* justify-content: start;
+
+  para que align funcione necesitamos altura-heigcht
+  align-content: start; */
+  height: 100vh;
+  background-color: red;
+}
+
+.grid-items div {
+    border: solid 1px;
+    font-size: 21px;
+    padding: 5px;
+    background-color: yellow;
+  }
+  
+
+
+  /* propiedades self o modificacion por items */
+.self {
+    justify-self:end ;
+}
+
+/* ejemplo profe mobile first  */
+
+#body-ejemplo{
+    display: grid;
+    grid-template-areas:
+    "cabecera-profe"
+    "galeria"
+    "banners"
+    "footer-profe";
+    grid-template-columns: repeat(1, 1fr);
+    background-color: beige;
+}
+
+@media screen and (min-width: 768px) {
+    #body-ejemplo{
+        grid-template-areas:
+        "cabecera-profe cabecera-profe"
+        "galeria galeria"
+        "banners banners"
+        "footer-profe footer-profe";
+
+    grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+#header-profe{
+    grid-area:cabecera-profe ;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    #header-profe {
+        flex-direction: row;
+    }
+}
+
+.nav-profe{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-profe li {
+    color: brown;
+}
+
+#galeria-profe{
+    grid-area: galeria;
+}
+
+#galeria-profe h2{
+    text-align: center;
+}
+
+.fotos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .fotos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        column-gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) { .fotos {
+    
+    grid-template-columns: repeat(3, 1fr);
+}
+
+}
+.fotos img{ 
+    width: 20rem;
+    height: 20rem;
+}
+ 
+/* estilo de los banners */
+#banners{
+    grid-area:banners ;
+    margin-top: 2rem;
+}
+
+#banners h3{
+    text-align: center;
+    margin-bottom:1rem ;
+}
+
+.padre-banner{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+@media screen and (min-width: 768px) { .padre-banner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+}
+@media screen and (min-width: 768px) { .padre-banner{
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+
+
+
+.hijo-banner {
+    text-align: center;
+}
+
+/* estilos footer */
+
+#footer-profe{
+    grid-area: footer-profe;
+    margin-top: 2rem;
+    background-color: black;
+   
+}
+
+#footer-profe p{
+    font-size: 1.8rem;
+    color: white
+}
+
+/* clase 8 animaciones */
+/* gradiente  */
+
+.gradiente-lineal {
+    background-image: linear-gradient(to left, red,yellow);
+    /* left es la direccion y depende de la que queramos poner y si no ponemos direccion va ir de arriva hacia abajo  */
+}
+
+.gradiente-radial{ 
+    background-image: radial-gradient( red,yellow);
+}
+
+/* transformaciones */
+
+.caja-animaciones{
+    background-color: black;
+    width: 300px;
+    height: 400px;
+
+    /* translate */
+    /* traslate solo lleva dos valores, el primero de izquierda a derecha y el segundo de arriba a abjo */
+
+    transform: translate(10px, 80px);
+
+    /* rotate */
+    transform: rotate(42deg);
+
+    /* scale */
+    /* transform: scale(2, 1); */
+
+    /* skew */
+    /* transform: skew(10deg, 40deg); */
+}
+
+.caja-animaciones:hover{
+    transform: scale(2);
+     cursor: pointer; /*para que al poner mouse sea como una manito */
+}
+
+/* Animaciones */
+.keyframe{
+    margin-top: 60px;
+    background-color: red;
+    width: 250px;
+    height: 250px;
+
+    /* nombre de la animacion */
+    animation-name: un_efecto;
+    /* cuantas veces se repite */
+    animation-iteration-count: infinite;
+    /* el estilo de la animacion */
+    animation-timing-function: ease-in;
+    /* Duracion */
+    animation-duration: 2s;
+    /* cuanto tarda en activarse */
+    animation-delay: 10s;
+
+}
+
+@keyframes un_efecto {
+    0%{ width: 100px; }
+    10%{ width: 50px; }
+    25%{ width: 300px; }
+    50%{ width: 200px;
+      background-color: black; }
+    75%{ width: 300px;}
+    100%{ width: 100px;
+      background-color:green;}
+ }
+ 
+/* animacion barra progreso */
+
+.barra-progreso{
+    margin-top: 40px;
+    width: 80%;
+    border: solid 5px;
+    height: 7px;
+}
+
+.barra-relleno {
+    border: solid 3px;
+    height: 6px;
+    width: 60%;
+    background-color: darkmagenta;
+
+    animation: cargando 1s infinite;
+}
+
+@keyframes cargando {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+ }
+ 
+ 
+ @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+ 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <img src="img/" alt="">
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">inicio</a>
+                    </li>
+                <li>nuestra historia</li>
+                <li>galeria de imagenes</li>
+                <li>donde estamos</li>
+                <li>
+                   <a href="contacto.html">contacto</a> 
+                    </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1> Formularios</h1>
+
+        <a href="https://www.coderhouse.com.co/" target="_blank">ir a coder house</a>
+
+        <form>
+
+            <fieldset> <!--cuadro que encierra form-->
+
+                <legend>ingresa tus datos</legend> <!--pone subtitulo en form-->
+
+
+                 <!-- en la lebel el for se machea con el id del input, si lo copiamos en los dos esto nos dejara al hacer clik en el texto activar el input-->
+            <div>
+                <label for="nombre y apellido">Nombre y apellido</label>
+                
+                <input type="text" id="Nombre y apellido" placeholder="indica nombre">
+            </div>
+            
+            <!--el placeholder me pone texto claro en el cuadro -->
+
+            <div>
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono">
+
+            </div>
+
+           <div>
+               <label for="codigo postal">Codigo postal</label>
+               <input type="number" id="codigo postal">
+           </div>
+
+           <div>
+               <label for="Correo electronico">Correo electronico</label>
+               <input type="email"  id="Correo electronico">
+           </div>
+
+           <div>
+               <label for= "contraseña">Contraseña</label>
+               <input type="password" id="contraseña">
+           </div>
+           
+
+            <textarea id=""></textarea>
+            <!--es el espacio para que nos pongan un mensaje -->
+
+            <!--el radio es un circulo de seleccion unica,  el name nos dice que son igual tipo el id la deferentes opciones-->
+            <input type="radio" name="opciones" id="Mayor">
+            <input type="radio" name="opciones" id="menor">
+
+            <!--el check es el cuadro para seleccion multiple-->
+            <input type="checkbox" id="">
+            <input type="checkbox" id="">
+            <input type="checkbox" id="">
+
+            <Select id= ""> <!-- select es para los cuadros despegables-->
+                <option disabled=""> seleccione opcion</option> <!--disble nos indica que hacer en el cuadro-->
+                <option value="">opcion 1</option>
+                <option value=""> opcion 2</option>
+                <option value="">opcion 3</option>
+                <option value="">opcion 4</option>
+
+                
+
+            </Select>
+
+            <input type="submit" value="Enviar"> <!--para enviar formulario-->
+
+            <input type="reset" value="Limpiar formulario"> <!--para limpiar los datos-->
+
+            <input type="button" value="reservado para js ">
+
+            </fieldset>
+
+        </form> 
+    </section>
+
+    <section> 
+        
+    </section>
+</body>
+</html>
