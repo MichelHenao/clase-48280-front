@@ -1,0 +1,10 @@
+Comandos
+
+1. git init: para empezar a trabajar con git, una vez activado ne se vuelve a utilizar 
+2. git status: me indica siempre el estado del repositorio 
+3.git add .: añadimos todos los archivos que git no encuentre 
+4. git commit -m "mensaje modificacion" : para confirmar los cambios realizados en el codigo, siempre debe llevar un cambio descriptivo 
+
+5. git log o :para averiguar cuando he guardado
+
+6. git branch rama-"nombre" : 

@@ -476,5 +476,63 @@ padding-bottom: 2rem;
     padding: 2rem;
 }
 
-
+/* Estilos pagina reseñas  */
   
+.estilo__form {
+    background-color: #222222;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 0rem 2rem;
+}
+.formulario {
+    width: 500px;
+    border-radius: 1em;
+
+}
+
+.boton__form {
+    margin-left: 210px;
+}
+.titulo { 
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-top: 3rem;
+    margin-right: 2rem ;
+    margin-left: 2rem;
+    padding: 15px;
+
+
+
+}
+.contenido {
+    background-color: #222222;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 0rem 2rem;
+}
+.Img__fav { 
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+}
+
+.boton { 
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    margin: 0rem 2rem;
+}
+.label__reseña { 
+    display: inline-block;
+    width: 150px; 
+    color:white;
+    text-align: left;
+
+    
+}
