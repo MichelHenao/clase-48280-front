@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* para poder usar rem como unidadde letras y equivale 1rem=10px */
+}
+
+
+img{
+    max-width: 100%;
+}
+
+header{
+    background-color: #333533;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding:5rem;
+    
+}
+
+.menu__nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu__nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.neon-line {
+    position: relative;
+    display: inline-block;
+  }
+  .neon-line:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e20019;
+    animation: neon-effect 1s ease-in-out infinite;
+  }
+  @keyframes neon-effect {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.logo{
+    width: 30rem;
+    height: 25rem;
+}
+
+.frase {
+    color: white;
+    font-size: 8rem;
+    text-align: center;
+    padding-top: 5rem;
+    font-family: 'Bangers', cursive;
+
+        color: #ffffff; /* color de letra */
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000; /* sombra */
+      
+    
+}
+
+.frase_blanca{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 5rem;
+    font-family: 'Lato', sans-serif;
+   
+}
+
+.contacto_inicio{
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.linea {
+    border-top: 1px solid white;
+    height: 1rem;
+    max-width: 35rem;
+    padding: 2rem;
+    margin: 20px auto 0 auto;
+  }
+
+.redes{
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+}
+
+
+/* estilos para pantallas grandes  */
+
+@media (min-width:768px) { 
+    header {
+        flex-direction: row-reverse ;
+        justify-content: space-around;
+
+    }
+    
+    .logo{
+         width: 25rem;
+        height: 25rem;  
+    } 
+
+    .contacto_inicio{
+        flex-direction: row ;
+        justify-content: space-around;
+
+    }
+}
+
+
+/*ESTILOS DE las secciones*/
+
+.grid-container, .grid-container-reverse{
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    
+  }
+  .grid-item-image{
+    grid-column: 1/2;
+    opacity: 0.7;
+    
+
+  }
+
+  .img-in{
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .grid-item-text{
+      grid-column: 1/2;
+      padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .grid-item-text-reverse{
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .grid-item-image-reverse{
+    opacity: 0.7;
+  }
+
+  button{
+    background-color: black;
+    color: white;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-size: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 15rem;
+    height: 50px;
+
+  }
+  button:hover {
+    background-color:white; 
+    color: black;
+}
+
+  @media (min-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+    
+    .grid-container-reverse{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+       
+    }
+
+    .grid-item-image-reverse{
+        width:auto;
+        height: auto;}
+
+    .img-in{
+            width: 55rem;
+            height: 58rem;
+          }
+
+    }
+    
+
+    .grid-item-text-reverse:nth-of-type(2) {
+        order:-1 ;
+    }
+
+
+      .grid-item-image{
+         grid-column: 1 / 2;
+        width: auto; 
+        height: auto;
+      }
+      
+      .grid-item-text{
+        grid-column: 2 / 3;
+       
+      }  
+
+/* fondos con opacidad */
+.img-menu{
+    background: #f3b5cb;
+}
+
+.img-ubicacion{
+    background:rgb(254,205,165) ;
+}
+
+.img-reseñas{
+    background: rgb(137, 237, 174) ;
+}
+
+.img-equipo-inicio{
+    background: #8ed1fc ;
+}
+    
+
+.Footer {
+    background-color: #333533;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 5rem;
+    gap: 5rem;
+    font-size: 1.5rem;
+    
+
+}
+
+.img__redes {
+    width: 5rem;
+    height: 5rem;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+@media (min-width:768px){
+    .img__redes{
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+    }
+}
+
+
+  /* estilos pagina menu  */
+
+  .pag-menu{
+    background-color:  #f3b5cb ;
+  }
+
+#menu{
+    align-items: center;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+
+}
+
+.titulo-menu{ 
+display: flex;
+justify-content: center;
+color: #000;
+font-family: 'Barlow Condensed', sans-serif;
+font-size: 4rem;
+padding-bottom: 5rem;}
+
+.menu-main .title-caption{
+	color:#666;
+}
+.tab-title-menu {
+	text-align:center;
+}
+
+.offer-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.offer-item img {
+    width: 25%;
+    float: left;
+    padding:1rem;
+    background:white ;
+	border-radius: 50%;
+}
+.offer-item .offer-price {
+    position: absolute;
+    right: 1rem;
+    top: 60%;
+    display: block;
+    transform: translate(0%, -50%);
+    color: #000;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    letter-spacing: .5px; 
+} 
+.offer-item div h3 {
+    font-size: 2.5rem;
+    font-family: 'Barlow Condensed', sans-serif;}
+ 
+.offer-item div p {
+    color: #6b6b6b;
+    font-size: 1.5rem;
+    text-align:justify; 
+    padding-right:8rem;
+    margin: 2rem;
+
+
+}
+
+/* Estilos pagina sobre nosotros */
+
+
+#our_team{
+    align-items: center;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+}
+
+.pag-equipo{
+    background-color: #8ed1fc ;
+}
+
+.sf-team .text-col {
+    float: left;
+    width: 100%;
+    padding: 5rem 2rem;
+    border: 1px solid white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align: center; 
+	background:#8ed1fc ; 
+
+}
+
+.sf-team .thumb a img{
+	width:100%;
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+.sf-team:hover .text-col{
+	border: 1px solid rgba(0,0,0,0);
+	transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in; 
+ } 
+.sf-team:hover .thumb img {
+    opacity: 0.6;
+	transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+}
+
+.text-col h3 {
+	font-family: 'nautilus_pompiliusregular';
+	font-size:3rem;
+}
+
+.text-col p {
+    font-family: 'nautilus_pompiliusregular';
+	font-size:1.5rem;
+}
+
+.sf-team:hover .team-social {
+    border-color: #fff;
+	transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+}
+
+.team-social {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+    list-style: none;
+    border-top: 1px solid;
+}
+
+.team-social li {
+    display: inline-block;
+    padding: 0 4px;
+}
+
+
+.team-social li a {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid white;
+    border-radius: 100%;
+    color: #222;
+    font-size: 10rem;
+    display: block;
+}
+
+.equipo{
+    align-items: center;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+}
+
+.block-title-equipo {
+color: #000;
+font-family: 'Barlow Condensed', sans-serif;
+font-size: 3rem;
+padding-bottom: 2rem;
+}
+
+.title-caption-equipo{
+    padding: 5rem;
+    font-size:2rem;
+    align-items: center;
+}
+
+
+.im-equipo{
+    border-radius: 100%;
+    
+}
+
+
+.equipo img {
+    width:100%;
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+
+  
