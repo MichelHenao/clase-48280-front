@@ -453,7 +453,7 @@ padding-bottom: 5rem;}
     justify-content:center ;
 }
 
-.block-title-equipo {
+.title {
 color: #000;
 font-family: 'Barlow Condensed', sans-serif;
 font-size: 3rem;
@@ -488,9 +488,10 @@ padding-bottom: 2rem;
     color: white;
     margin: 0rem 2rem;
 }
-.formulario {
-    width: 500px;
-    border-radius: 1em;
+.formulario,.indicativo {
+    color: rgb(19, 18, 18);
+    font-size: 2rem;
+    line-height: 4rem;
 
 }
 
@@ -534,8 +535,15 @@ padding-bottom: 2rem;
 .label__reseña { 
     display: inline-block;
     width: 150px; 
-    color:white;
+    color: 0;
+    font-size: 2rem;
     text-align: left;
+}
 
-    
+.pag-resenas{
+    background-color: rgb(137, 237, 174);
+}
+
+.Pag-sede{
+    background-color: rgb(254,205,165);
 }
