@@ -12,6 +12,9 @@ img{
     max-width: 100%;
 }
 
+body{
+    overflow-x: hidden;
+}
 header{
     background-color: #333533;
     display: flex;
